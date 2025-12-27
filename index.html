@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nivlac8's Portfolio</title>
+    <title>Calvin Immanuel D - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-main: #f1f5f9;
-            --text-secondary: #94a3b8;
-            --accent: #38bdf8;
-            --accent-hover: #0ea5e9;
+            /* Premium Palette */
+            --bg-color: #0b0d17; /* Very Deep Navy/Black */
+            --card-bg: rgba(26, 32, 44, 0.7); /* Glassy Dark */
+            --text-main: #ffffff;
+            --text-secondary: #a0aec0;
+            --accent: #d4af37; /* Metallic Gold */
+            --accent-glow: rgba(212, 175, 55, 0.3);
         }
 
         * {
@@ -23,11 +25,12 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Open Sans', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.6;
+            line-height: 1.7;
             padding: 2rem;
+            background-image: radial-gradient(circle at top right, #1a202c 0%, transparent 40%);
         }
 
         .container {
@@ -35,107 +38,132 @@
             margin: 0 auto;
         }
 
+        /* Header Section */
         header {
             text-align: center;
-            padding: 4rem 0;
+            padding: 5rem 0 4rem 0;
         }
 
         h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
             letter-spacing: -1px;
+            text-transform: uppercase;
+            /* Gold Gradient Text */
+            background: linear-gradient(to right, #fef9c3, #d4af37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .role-title {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--accent);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         .bio {
             color: var(--text-secondary);
-            font-size: 1.2rem;
-            max-width: 600px;
+            font-size: 1.1rem;
+            max-width: 700px;
             margin: 0 auto 2rem auto;
         }
 
         .social-links a {
             color: var(--text-main);
-            font-size: 1.5rem;
-            margin: 0 10px;
-            transition: color 0.3s ease;
+            font-size: 1.8rem;
+            margin: 0 15px;
+            transition: all 0.3s ease;
         }
 
         .social-links a:hover {
             color: var(--accent);
+            transform: scale(1.1);
         }
 
+        /* Project Grid */
         .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
         }
 
+        /* Premium Card Design */
         .card {
             background-color: var(--card-bg);
-            border-radius: 12px;
-            padding: 2rem;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            backdrop-filter: blur(10px); /* Frosted Glass Effect */
+            border-radius: 16px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            border: 1px solid rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            position: relative;
+            overflow: hidden;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transform: translateY(-7px);
             border-color: var(--accent);
+            box-shadow: 0 10px 30px var(--accent-glow);
         }
 
         .card-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .folder-icon {
             color: var(--accent);
-            font-size: 2rem;
+            font-size: 2.2rem;
         }
 
         .card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: #fff;
         }
 
         .card p {
             color: var(--text-secondary);
             font-size: 0.95rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
+        /* Tech Stack Tags */
         .tech-stack {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-bottom: 1.5rem;
+            margin-bottom: 0;
         }
 
         .tag {
             font-size: 0.75rem;
-            font-family: monospace;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
             color: var(--accent);
-            background: rgba(56, 189, 248, 0.1);
-            padding: 4px 8px;
-            border-radius: 4px;
-        }
-
-        .card-links {
-            display: flex;
-            gap: 1rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 5px 12px;
+            border-radius: 20px; /* Rounded pill shape */
         }
 
         .card-links a {
             text-decoration: none;
             color: var(--text-main);
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            transition: color 0.2s;
         }
 
         .card-links a:hover {
@@ -144,9 +172,17 @@
 
         footer {
             text-align: center;
-            margin-top: 5rem;
+            margin-top: 6rem;
+            padding-bottom: 2rem;
             color: var(--text-secondary);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        /* Mobile Adjustment */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .container { padding: 1rem; }
         }
     </style>
 </head>
@@ -154,10 +190,11 @@
 
     <div class="container">
         <header>
-            <h1>Nivlac8</h1>
+            <h1>Calvin Immanuel D</h1>
+            <div class="role-title">Data Analyst</div>
             <p class="bio">
-                Data Analyst & Developer.<br>
-                Specializing in SQL, Excel, and Supply Chain Analytics.
+                Transforming raw data into actionable business insights.<br>
+                Specializing in <strong>SQL</strong>, <strong>Excel</strong>, <strong>Power BI</strong>, <strong>Google Sheets</strong>, and <strong>Supply Chain Analytics</strong>.
             </p>
             <div class="social-links">
                 <a href="https://github.com/Nivlac8" target="_blank"><i class="fab fa-github"></i></a>
@@ -174,10 +211,10 @@
                     </div>
                 </div>
                 <h3>Olist Supply Chain</h3>
-                <p>Analysis of order processing, delivery times, and logistics performance using the Olist dataset.</p>
+                <p>Strategic analysis of order processing and logistics performance using the Olist dataset to optimize delivery times.</p>
                 <div class="tech-stack">
                     <span class="tag">Supply Chain</span>
-                    <span class="tag">Data Analysis</span>
+                    <span class="tag">Python/SQL</span>
                 </div>
             </div>
 
@@ -188,11 +225,11 @@
                         <a href="https://github.com/Nivlac8/SQL-E-Commerce-Analysis" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
-                <h3>E-Commerce SQL Analysis</h3>
-                <p>Leveraging SQL queries to uncover sales trends, customer behavior, and revenue insights.</p>
+                <h3>E-Commerce Analysis</h3>
+                <p>Leveraging complex SQL queries to uncover sales trends, customer behavior patterns, and revenue insights.</p>
                 <div class="tech-stack">
                     <span class="tag">SQL</span>
-                    <span class="tag">Database</span>
+                    <span class="tag">Data Mining</span>
                 </div>
             </div>
 
@@ -203,8 +240,8 @@
                         <a href="https://github.com/Nivlac8/Excel-Kickstarter-Analysis" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
-                <h3>Kickstarter Campaign Analysis</h3>
-                <p>Analyzing crowdfunding data to identify factors that lead to successful campaign funding.</p>
+                <h3>Kickstarter Campaign Audit</h3>
+                <p>A deep dive into crowdfunding data using advanced Excel functions to identify success factors for campaigns.</p>
                 <div class="tech-stack">
                     <span class="tag">Excel</span>
                     <span class="tag">Pivot Tables</span>
@@ -219,10 +256,10 @@
                     </div>
                 </div>
                 <h3>Bike Store Sales Dashboard</h3>
-                <p>A visual dashboard tracking sales performance across different regions and product categories.</p>
+                <p>Interactive dashboard tracking regional sales performance and product category trends.</p>
                 <div class="tech-stack">
-                    <span class="tag">Dashboard</span>
-                    <span class="tag">Visualization</span>
+                    <span class="tag">Power BI</span>
+                    <span class="tag">Dashboarding</span>
                 </div>
             </div>
 
@@ -233,11 +270,11 @@
                         <a href="https://github.com/Nivlac8/COVID19-Analysis" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
-                <h3>COVID-19 Global Data</h3>
-                <p>Exploration of global pandemic data to visualize infection rates and recovery trends.</p>
+                <h3>COVID-19 Global Trends</h3>
+                <p>Exploratory data analysis of global pandemic statistics to visualize infection rates and recovery trajectories.</p>
                 <div class="tech-stack">
                     <span class="tag">SQL</span>
-                    <span class="tag">Data Cleaning</span>
+                    <span class="tag">Tableau</span>
                 </div>
             </div>
 
@@ -248,10 +285,10 @@
                         <a href="https://github.com/Nivlac8/IMDB-Movie-Data-Analysis" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
-                <h3>IMDB Movie Analysis</h3>
-                <p>Analyzing movie ratings, genres, and revenue to determine what makes a box office hit.</p>
+                <h3>IMDB Movie Analytics</h3>
+                <p>Statistical analysis of ratings, genres, and revenue to determine the key drivers of box office success.</p>
                 <div class="tech-stack">
-                    <span class="tag">Data Analysis</span>
+                    <span class="tag">Python</span>
                     <span class="tag">Statistics</span>
                 </div>
             </div>
@@ -259,7 +296,7 @@
         </div>
 
         <footer>
-            <p>&copy; 2025 Nivlac8. All rights reserved.</p>
+            <p>&copy; 2025 Calvin Immanuel D. All rights reserved.</p>
         </footer>
     </div>
 

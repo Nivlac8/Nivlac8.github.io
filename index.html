@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calvin Immanuel D - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Premium "Onyx & Platinum" Palette */
+            --bg-color: #0b0c10;       /* Very Deep, almost black blue */
+            --card-bg: #1f2833;        /* Matte Charcoal */
+            --text-main: #ffffff;      /* Pure White */
+            --text-secondary: #c5c6c7; /* Light Silver Grey */
+            --accent: #66fcf1;         /* Bright Cyan/Silver Hybrid - High Contrast */
+            --accent-muted: #45a29e;   /* Muted Teal for borders */
+        }
+
+        /* Note: If you prefer strictly Silver without the Teal tint, 
+           change --accent to #e2e8f0 and --accent-muted to #94a3b8 */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 6rem 0 4rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            color: var(--text-main);
+        }
+
+        .role-title {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--accent);
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .bio {
+            color: var(--text-secondary);
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem auto;
+            font-weight: 300;
+        }
+
+        .bio strong {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .social-links a {
+            color: var(--text-secondary);
+            font-size: 1.8rem;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* Project Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Premium Card Design */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px; /* Sharper corners for a professional look */
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid transparent;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-muted);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .folder-icon {
+            color: var(--accent);
+            font-size: 2rem;
+        }
+
+        .card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        /* Tech Stack Tags */
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.1);
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        .card-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 1.3rem;
+            transition: color 0.2s;
+        }
+
+        .card-links a:hover {
+            color: var(--accent);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 6rem;
+            padding-bottom: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            opacity: 0.6;
+        }
+
+        /* Mobile Adjustment */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .container { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Calvin Immanuel D</h1>
+            <div class="role-title">Data Analyst</div>
+            <p class="bio">
+                Building data solutions with <strong>Logic, SQL, and Strategy</strong>.<br>
+                Specializing in Supply Chain Analytics, Power BI, Excel, and Google Sheets.
+            </p>
+            <div class="social-links">
+                <a href="https://github.com/Nivlac8" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </header>
+
+        <div class="project-grid">
+
+            <div class="card">
+                <div class="card-header">
+                    <i class="far fa-folder folder-icon"></i>
+                    <div class="card-links">
+                        <a href="https://github.com/Nivlac8/Excel-Kickstarter-Analysis" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <h3>Kickstarter Campaign Success Analysis</h3>
+                <p>Cleaned and categorized messy text data to predict campaign success. Utilized nested <strong>IFS</strong> for logic tiers and text functions for data standardization.</p>
+                <div class="tech-stack">
+                    <span class="tag">Excel</span>
+                    <span class="tag">Text Cleaning</span>
+                    <span class="tag">Logical Functions</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <i class="far fa-folder folder-icon"></i>
+                    <div class="card-links">
+                        <a href="https://github.com/Nivlac8/Bike-Store-Sales-Dashboard" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <h3>Bike Store Relational Data Analysis</h3>
+                <p>Created a dynamic pricing tool using relational datasets. Built with <strong>XLOOKUP</strong> for data merging and <strong>Pivot Tables</strong> for regional sales reporting.</p>
+                <div class="tech-stack">
+                    <span class="tag">Excel</span>
+                    <span class="tag">XLOOKUP</span>
+                    <span class="tag">Pivot Tables</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <i class="far fa-folder folder-icon"></i>
+                    <div class="card-links">
+                        <a href="https://github.com/Nivlac8/IMDB-Movie-Data-Analysis" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <h3>IMDB Movie Database Analysis</h3>
+                <p>Analyzed the connection between ratings, genres, and revenue. Mastered <strong>JOINs</strong> to connect tables and complex <strong>GROUP BY</strong> aggregations.</p>
+                <div class="tech-stack">
+                    <span class="tag">SQL (SQLite)</span>
+                    <span class="tag">Joins</span>
+                    <span class="tag">Aggregation</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <i class="far fa-folder folder-icon"></i>
+                    <div class="card-links">
+                        <a href="https://github.com/Nivlac8/COVID19-Analysis" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <h3>COVID-19 Trend Analysis</h3>
+                <p>Time-series analysis of global infection rates. Utilized <strong>Window Functions</strong> (Running Totals, Rank) to track growth and compare country performance.</p>
+                <div class="tech-stack">
+                    <span class="tag">SQL (MySQL)</span>
+                    <span class="tag">Window Functions</span>
+                    <span class="tag">Tableau</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <i class="far fa-folder folder-icon"></i>
+                    <div class="card-links">
+                        <a href="https://github.com/Nivlac8/Olist-Ecommerce-Supply-Chain-Analysis" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <h3>Olist E-Commerce 360 Analysis</h3>
+                <p>End-to-end analysis of logistics and customer value. Built a <strong>Star Schema</strong> data model to analyze delivery times vs review scores.</p>
+                <div class="tech-stack">
+                    <span class="tag">Supply Chain</span>
+                    <span class="tag">Data Modeling</span>
+                    <span class="tag">Python</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <i class="far fa-folder folder-icon"></i>
+                    <div class="card-links">
+                        <a href="https://github.com/Nivlac8/SQL-E-Commerce-Analysis" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <h3>US Superstore Sales Analysis</h3>
+                <p>Exploratory data analysis of sales records using fundamental SQL commands. Focused on data retrieval, filtering, and basic aggregation.</p>
+                <div class="tech-stack">
+                    <span class="tag">Basic SQL</span>
+                    <span class="tag">Data Filtering</span>
+                    <span class="tag">Reporting</span>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Calvin Immanuel D. Built with Code.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

@@ -12,12 +12,12 @@
 <style>
 
 :root {
-    --bg-color: #0b0c10;
-    --card-bg: #1f2833;
-    --text-main: #ffffff;
-    --text-secondary: #c5c6c7;
-    --accent: #66fcf1;
-    --accent-muted: #45a29e;
+--bg-color:#0b0c10;
+--card-bg:#1f2833;
+--text-main:#ffffff;
+--text-secondary:#c5c6c7;
+--accent:#66fcf1;
+--accent-muted:#45a29e;
 }
 
 *{
@@ -42,9 +42,9 @@ margin:0 auto;
 
 header{
 text-align:center;
-padding:6rem 0 4rem 0;
+padding:6rem 0 3rem 0;
 border-bottom:1px solid rgba(255,255,255,0.05);
-margin-bottom:3rem;
+margin-bottom:2rem;
 }
 
 h1{
@@ -54,8 +54,6 @@ font-weight:700;
 margin-bottom:0.5rem;
 letter-spacing:-1px;
 text-transform:uppercase;
-color:var(--text-main);
-line-height:1.2;
 }
 
 .role-title{
@@ -72,7 +70,7 @@ letter-spacing:3px;
 color:var(--text-secondary);
 font-size:1.15rem;
 max-width:700px;
-margin:0 auto 1.8rem auto;
+margin:0 auto 1.5rem auto;
 font-weight:300;
 }
 
@@ -84,22 +82,75 @@ font-weight:600;
 .header-accent{
 width:120px;
 height:3px;
-margin:1.8rem auto 2.5rem auto;
+margin:1.5rem auto 2rem auto;
 background:linear-gradient(90deg,transparent,var(--accent),transparent);
 border-radius:2px;
 opacity:0.8;
 }
 
-.social-links a{
+.social-links{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:10px;
+}
+
+.social-item{
+display:flex;
+flex-direction:column;
+align-items:center;
+text-decoration:none;
 color:var(--text-secondary);
 font-size:1.8rem;
-margin:0 15px;
 transition:all 0.3s ease;
 }
 
-.social-links a:hover{
+.social-item span{
+font-size:0.75rem;
+margin-top:6px;
+letter-spacing:1px;
+}
+
+.social-item:hover{
 color:var(--accent);
 transform:translateY(-3px);
+}
+
+.featured{
+text-align:center;
+margin-bottom:3.5rem;
+}
+
+.featured-text{
+color:var(--text-secondary);
+margin-bottom:1.2rem;
+}
+
+.featured-buttons{
+display:flex;
+justify-content:center;
+gap:16px;
+}
+
+.btn{
+background:var(--accent);
+color:#000;
+padding:10px 18px;
+border-radius:5px;
+text-decoration:none;
+font-weight:600;
+font-size:0.9rem;
+transition:all 0.25s ease;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+}
+
+.btn-outline{
+background:transparent;
+border:1px solid var(--accent-muted);
+color:var(--text-main);
 }
 
 .section-title{
@@ -163,7 +214,6 @@ font-family:'Montserrat',sans-serif;
 font-size:1.4rem;
 font-weight:700;
 margin-bottom:1rem;
-color:var(--text-main);
 }
 
 .card p{
@@ -181,7 +231,6 @@ gap:8px;
 
 .tag{
 font-size:0.75rem;
-font-family:'Inter',sans-serif;
 font-weight:500;
 color:var(--text-main);
 background:rgba(255,255,255,0.1);
@@ -242,28 +291,51 @@ Business Operations Analyst
 </div>
 
 <p class="bio">
-Business Operations analyst with experience supporting enterprise workflows, operational reporting, and process optimization. Focused on improving <strong>workflow efficiency, operational visibility, and data-driven decision making</strong> through structured analysis and reporting.
+Business Operations analyst with experience supporting enterprise workflows, operational reporting, and process optimization. Focused on improving <strong>workflow efficiency, operational visibility, and data-driven decision making</strong>.
 </p>
 
 <div class="header-accent"></div>
 
 <div class="social-links">
 
-<a href="https://github.com/Nivlac8" target="_blank">
+<a href="https://github.com/Nivlac8" target="_blank" class="social-item">
 <i class="fab fa-github"></i>
+<span>GitHub</span>
 </a>
 
-<a href="https://www.linkedin.com/in/calvin-d-immanuel-289413389/" target="_blank">
+<a href="https://www.linkedin.com/in/calvin-d-immanuel-289413389/" target="_blank" class="social-item">
 <i class="fab fa-linkedin"></i>
+<span>LinkedIn</span>
 </a>
 
-<a href="/Calvin_Resume.pdf" target="_blank">
+<a href="Calvin_Resume.pdf" download class="social-item">
 <i class="fas fa-file-alt"></i>
+<span>Download Resume</span>
 </a>
 
 </div>
 
 </header>
+
+<section class="featured">
+
+<p class="featured-text">
+View selected operational analytics and workflow optimization projects.
+</p>
+
+<div class="featured-buttons">
+
+<a href="Calvin_Resume.pdf" class="btn" download>
+Download Resume
+</a>
+
+<a href="https://github.com/Nivlac8" class="btn btn-outline">
+GitHub Projects
+</a>
+
+</div>
+
+</section>
 
 <h2 class="section-title">
 Selected Projects
@@ -286,7 +358,7 @@ Selected Projects
 <h3>Operational Reporting Automation Tool</h3>
 
 <p>
-Built reusable data standardization pipelines to automate operational reporting workflows, improving data consistency and reducing manual effort across recurring business reports.
+Built reusable data standardization pipelines to automate operational reporting workflows, improving data consistency and reducing manual effort across recurring reports.
 </p>
 
 <div class="tech-stack">
@@ -296,7 +368,6 @@ Built reusable data standardization pipelines to automate operational reporting 
 </div>
 
 </div>
-
 
 <div class="card">
 
@@ -313,7 +384,7 @@ Built reusable data standardization pipelines to automate operational reporting 
 <h3>E-Commerce Marketplace Performance Analysis</h3>
 
 <p>
-Analyzed end-to-end marketplace logistics data to identify delivery bottlenecks impacting customer satisfaction and partner performance. Generated insights supporting inventory planning and operational KPI monitoring.
+Analyzed marketplace logistics data to identify delivery bottlenecks affecting customer satisfaction and partner performance.
 </p>
 
 <div class="tech-stack">
@@ -323,7 +394,6 @@ Analyzed end-to-end marketplace logistics data to identify delivery bottlenecks 
 </div>
 
 </div>
-
 
 <div class="card">
 
@@ -340,7 +410,7 @@ Analyzed end-to-end marketplace logistics data to identify delivery bottlenecks 
 <h3>Personal Finance Operating Dashboard</h3>
 
 <p>
-Designed a structured financial tracking dashboard with automated validation, liquidity monitoring, and performance summaries. Demonstrates process design and recurring reporting discipline.
+Designed a structured financial dashboard for liquidity monitoring and recurring financial tracking.
 </p>
 
 <div class="tech-stack">

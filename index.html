@@ -21,198 +21,207 @@
 }
 
 *{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
 body{
-    font-family:'Inter',sans-serif;
-    background-color:var(--bg-color);
-    color:var(--text-main);
-    line-height:1.7;
-    padding:2rem;
-    overflow-x:hidden;
+font-family:'Inter',sans-serif;
+background-color:var(--bg-color);
+color:var(--text-main);
+line-height:1.7;
+padding:2rem;
+overflow-x:hidden;
 }
 
 .container{
-    max-width:1200px;
-    margin:0 auto;
+max-width:1200px;
+margin:0 auto;
 }
 
 header{
-    text-align:center;
-    padding:6rem 0 4rem 0;
-    border-bottom:1px solid rgba(255,255,255,0.05);
-    margin-bottom:3rem;
+text-align:center;
+padding:6rem 0 4rem 0;
+border-bottom:1px solid rgba(255,255,255,0.05);
+margin-bottom:3rem;
 }
 
 h1{
-    font-family:'Montserrat',sans-serif;
-    font-size:3.5rem;
-    font-weight:700;
-    margin-bottom:0.5rem;
-    letter-spacing:-1px;
-    text-transform:uppercase;
-    color:var(--text-main);
-    line-height:1.2;
+font-family:'Montserrat',sans-serif;
+font-size:3.8rem;
+font-weight:700;
+margin-bottom:0.5rem;
+letter-spacing:-1px;
+text-transform:uppercase;
+color:var(--text-main);
+line-height:1.2;
 }
 
 .role-title{
-    font-family:'Montserrat',sans-serif;
-    color:var(--accent);
-    font-size:1.1rem;
-    font-weight:500;
-    margin-bottom:2rem;
-    text-transform:uppercase;
-    letter-spacing:3px;
+font-family:'Montserrat',sans-serif;
+color:var(--accent);
+font-size:1.1rem;
+font-weight:500;
+margin-bottom:2rem;
+text-transform:uppercase;
+letter-spacing:3px;
 }
 
 .bio{
-    color:var(--text-secondary);
-    font-size:1.15rem;
-    max-width:700px;
-    margin:0 auto 2.5rem auto;
-    font-weight:300;
+color:var(--text-secondary);
+font-size:1.15rem;
+max-width:700px;
+margin:0 auto 1.8rem auto;
+font-weight:300;
 }
 
 .bio strong{
-    color:var(--text-main);
-    font-weight:600;
+color:var(--text-main);
+font-weight:600;
+}
+
+.header-accent{
+width:120px;
+height:3px;
+margin:1.8rem auto 2.5rem auto;
+background:linear-gradient(90deg,transparent,var(--accent),transparent);
+border-radius:2px;
+opacity:0.8;
 }
 
 .social-links a{
-    color:var(--text-secondary);
-    font-size:1.8rem;
-    margin:0 15px;
-    transition:all 0.3s ease;
+color:var(--text-secondary);
+font-size:1.8rem;
+margin:0 15px;
+transition:all 0.3s ease;
 }
 
 .social-links a:hover{
-    color:var(--accent);
-    transform:translateY(-3px);
+color:var(--accent);
+transform:translateY(-3px);
 }
 
 .section-title{
-    text-align:center;
-    margin-bottom:2.5rem;
-    font-family:'Montserrat',sans-serif;
-    font-weight:500;
-    color:var(--text-secondary);
-    letter-spacing:1px;
+text-align:center;
+margin-bottom:2.5rem;
+font-family:'Montserrat',sans-serif;
+font-weight:500;
+color:var(--text-secondary);
+letter-spacing:1px;
 }
 
 .project-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:2rem;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:2rem;
 }
 
 .card{
-    background-color:var(--card-bg);
-    border-radius:8px;
-    padding:2.5rem;
-    transition:all 0.3s ease;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    border:1px solid transparent;
-    box-shadow:0 4px 6px rgba(0,0,0,0.3);
+background-color:var(--card-bg);
+border-radius:8px;
+padding:2.5rem;
+transition:all 0.3s ease;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+border:1px solid transparent;
+box-shadow:0 4px 6px rgba(0,0,0,0.3);
 }
 
 .card:hover{
-    transform:translateY(-6px);
-    border-color:var(--accent);
-    box-shadow:0 12px 25px rgba(0,0,0,0.45);
+transform:translateY(-6px);
+border-color:var(--accent);
+box-shadow:0 12px 25px rgba(0,0,0,0.45);
 }
 
 .card-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    margin-bottom:1.5rem;
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+margin-bottom:1.5rem;
 }
 
 .folder-icon{
-    color:var(--accent);
-    font-size:2rem;
+color:var(--accent);
+font-size:2rem;
 }
 
 .card-links a{
-    text-decoration:none;
-    color:var(--text-secondary);
-    font-size:1.3rem;
-    transition:color 0.2s;
+text-decoration:none;
+color:var(--text-secondary);
+font-size:1.3rem;
+transition:color 0.2s;
 }
 
 .card-links a:hover{
-    color:var(--accent);
+color:var(--accent);
 }
 
 .card h3{
-    font-family:'Montserrat',sans-serif;
-    font-size:1.4rem;
-    font-weight:700;
-    margin-bottom:1rem;
-    color:var(--text-main);
+font-family:'Montserrat',sans-serif;
+font-size:1.4rem;
+font-weight:700;
+margin-bottom:1rem;
+color:var(--text-main);
 }
 
 .card p{
-    color:var(--text-secondary);
-    font-size:0.95rem;
-    margin-bottom:2rem;
-    line-height:1.6;
+color:var(--text-secondary);
+font-size:0.95rem;
+margin-bottom:2rem;
+line-height:1.6;
 }
 
 .tech-stack{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
+display:flex;
+flex-wrap:wrap;
+gap:8px;
 }
 
 .tag{
-    font-size:0.75rem;
-    font-family:'Inter',sans-serif;
-    font-weight:500;
-    color:var(--text-main);
-    background:rgba(255,255,255,0.1);
-    padding:4px 10px;
-    border-radius:4px;
+font-size:0.75rem;
+font-family:'Inter',sans-serif;
+font-weight:500;
+color:var(--text-main);
+background:rgba(255,255,255,0.1);
+padding:4px 10px;
+border-radius:4px;
 }
 
 footer{
-    text-align:center;
-    margin-top:6rem;
-    padding-bottom:2rem;
-    color:var(--text-secondary);
-    font-size:0.85rem;
-    opacity:0.6;
+text-align:center;
+margin-top:6rem;
+padding-bottom:2rem;
+color:var(--text-secondary);
+font-size:0.85rem;
+opacity:0.6;
 }
 
 @media (max-width:768px){
 
 body{
-    padding:1.5rem 1rem;
+padding:1.5rem 1rem;
 }
 
 header{
-    padding:3rem 0 2rem 0;
+padding:3rem 0 2rem 0;
 }
 
 h1{
-    font-size:2.2rem;
+font-size:2.2rem;
 }
 
 .bio{
-    font-size:1rem;
+font-size:1rem;
 }
 
 .card{
-    padding:1.5rem;
+padding:1.5rem;
 }
 
 .project-grid{
-    gap:1.5rem;
+gap:1.5rem;
 }
 
 }
@@ -235,6 +244,8 @@ Business Operations Analyst
 <p class="bio">
 Business Operations analyst with experience supporting enterprise workflows, operational reporting, and process optimization. Focused on improving <strong>workflow efficiency, operational visibility, and data-driven decision making</strong> through structured analysis and reporting.
 </p>
+
+<div class="header-accent"></div>
 
 <div class="social-links">
 
@@ -260,12 +271,9 @@ Selected Projects
 
 <div class="project-grid">
 
-<!-- Project 1 -->
-
 <div class="card">
 
 <div class="card-header">
-
 <i class="far fa-folder folder-icon"></i>
 
 <div class="card-links">
@@ -273,33 +281,26 @@ Selected Projects
 <i class="fab fa-github"></i>
 </a>
 </div>
-
 </div>
 
-<h3>
-Operational Reporting Automation Tool
-</h3>
+<h3>Operational Reporting Automation Tool</h3>
 
 <p>
 Built reusable data standardization pipelines to automate operational reporting workflows, improving data consistency and reducing manual effort across recurring business reports.
 </p>
 
 <div class="tech-stack">
-
 <span class="tag">Python</span>
 <span class="tag">Automation</span>
 <span class="tag">Process Efficiency</span>
-
 </div>
 
 </div>
 
-<!-- Project 2 -->
 
 <div class="card">
 
 <div class="card-header">
-
 <i class="far fa-folder folder-icon"></i>
 
 <div class="card-links">
@@ -307,33 +308,26 @@ Built reusable data standardization pipelines to automate operational reporting 
 <i class="fab fa-github"></i>
 </a>
 </div>
-
 </div>
 
-<h3>
-E-Commerce Marketplace Performance Analysis
-</h3>
+<h3>E-Commerce Marketplace Performance Analysis</h3>
 
 <p>
 Analyzed end-to-end marketplace logistics data to identify delivery bottlenecks impacting customer satisfaction and partner performance. Generated insights supporting inventory planning and operational KPI monitoring.
 </p>
 
 <div class="tech-stack">
-
 <span class="tag">Supply Chain</span>
 <span class="tag">Marketplace Ops</span>
 <span class="tag">Power BI</span>
-
 </div>
 
 </div>
 
-<!-- Project 3 -->
 
 <div class="card">
 
 <div class="card-header">
-
 <i class="far fa-folder folder-icon"></i>
 
 <div class="card-links">
@@ -341,23 +335,18 @@ Analyzed end-to-end marketplace logistics data to identify delivery bottlenecks 
 <i class="fab fa-github"></i>
 </a>
 </div>
-
 </div>
 
-<h3>
-Personal Finance Operating Dashboard
-</h3>
+<h3>Personal Finance Operating Dashboard</h3>
 
 <p>
 Designed a structured financial tracking dashboard with automated validation, liquidity monitoring, and performance summaries. Demonstrates process design and recurring reporting discipline.
 </p>
 
 <div class="tech-stack">
-
 <span class="tag">Google Sheets</span>
 <span class="tag">Dashboarding</span>
 <span class="tag">Process Design</span>
-
 </div>
 
 </div>
@@ -365,9 +354,7 @@ Designed a structured financial tracking dashboard with automated validation, li
 </div>
 
 <footer>
-<p>
-© 2026 Calvin Immanuel D · Portfolio
-</p>
+<p>© 2026 Calvin Immanuel D · Portfolio</p>
 </footer>
 
 </div>
